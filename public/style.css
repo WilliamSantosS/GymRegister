@@ -51,7 +51,7 @@ header {
     background-color: var(--primary-color);
     position: absolute;
     bottom: -4px;
-    left: 0;
+    left: 0;    
 }
 
 .links a:hover::after {
@@ -103,7 +103,7 @@ header {
 
    .details .item{
        padding: 16px 0;
-       border-bottom: rgba(0, 0, 0, 0.1);
+       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
    }
 
    .details .item:last-child {
@@ -162,7 +162,8 @@ header {
        font-weight: normal;
     }
 
-    button[type="submit"] {
+    button[type="submit"],
+    a.button {
         padding: 8px 32px;
         background-color: var(--primary-color);
         border-radius: 4px;
@@ -170,4 +171,11 @@ header {
         width: 100%;
         color: white;
         font-size: 16px;
+    }
+
+    a.button { 
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        box-sizing: border-box;
     }
