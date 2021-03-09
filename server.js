@@ -2,14 +2,16 @@
 const nunjucks = require('nunjucks')
 const express = require('express')
 const routes = require('./routes')
+const methodOverride = require('method-override')
 
 const server = express();
 
 //Midllewars
 //acessando a pasta que contem os arquivos staticos CSS
 server.use(express.urlencoded({ extended: true }))
-server.use(express.static('Public'));
-server.use(routes);
+server.use(express.static('Public'))
+server.use(methodOverride('_method'))
+server.use(routes)
 
 //Dizendo qual motor será utilizado que nesse caso é a view engine
 server.set("view engine", "njk");

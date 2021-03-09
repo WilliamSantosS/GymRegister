@@ -1,0 +1,75 @@
+
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+                <input type="url" name="avatar_url" placeholder="https://" autocomplete="off" value="{{ member.avatar_url }}" >
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Name</div>
+            <div>
+                <input type="text" name="name" autocomplete="off" value="{{ member.name }}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>E-mail</div>
+            <div>
+                <input type="email" name="email" autocomplete="off" value="{{ member.email }}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Day of Birth</div>
+            <div>
+                <input type="date" name="birth" value="{{ member.birth }}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Sex</div>
+            <div>
+                <span><input type="radio" name="gender" value="M" {% if member.gender == "M" %} checked {% endif %}>Male</span>  
+                <span><input type="radio" name="gender" value="F" {% if member.gender == "F" %} checked {% endif %}>Female</span>   
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Blood type</div>
+            <div>
+                <select name="blood">
+                    <option value="A+" {% if member.blood == "A+" %} selected {% endif %} >A+</option>
+
+                    <option value="A-" {% if member.blood == "A-" %} selected {% endif %} >A-</option>
+
+                    <option value="B+" {% if member.blood == "B+" %} selected {% endif %} >B+</option>
+
+                    <option value="B-" {% if member.blood == "B-" %} selected {% endif %} >B-</option>
+
+                    <option value="AB+" {% if member.blood == "AB+" %} selected {% endif %} >AB+</option>
+
+                     <option value="AB-" {% if member.blood == "AB-" %} selected {% endif %} >AB-</option>
+
+                    <option value="O+" {% if member.blood == "O+" %} selected {% endif %} >O+</option>
+
+                    <option value="O-" {% if member.blood == "O-" %} selected {% endif %} >O-</option>
+                </select>
+            </div>
+        </div>
+
+     <div class="item">
+            <div>Weigth</div>
+            <div>
+                <input type="number" name="weigth" autocomplete="off" value="{{ member.weigth }}">
+            </div>
+        </div>
+
+         <div class="item">
+            <div>Height</div>
+            <div>
+                <input type="number" name="height" autocomplete="off" value="{{ member.height }}">
+            </div>
+        </div>
+      
+        <button type="submit">Save</button>
