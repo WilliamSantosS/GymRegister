@@ -19,7 +19,7 @@ server.set("view engine", "njk");
 //Depois podemos fazer a configuração da rota que ele irá utilizar
 //que nesse caso será a pasta views e também dizemos que vamos usar o express e a variavel que 
 //estamos utilizando
-nunjucks.configure("Views", {
+nunjucks.configure("src/app/views", {
     express: server,
     autoescape: false
 });

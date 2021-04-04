@@ -1,5 +1,5 @@
 module.exports = {
-   age: function(timestamp) {
+   age(timestamp) {
     const today = new Date()
     const birthDate = new Date(timestamp)
 
@@ -12,7 +12,7 @@ module.exports = {
     return age;
    },
 
-   date: function(timestamp) {
+   date(timestamp) {
        const date = new Date(timestamp)
     
        const year = date.getUTCFullYear()
@@ -26,7 +26,8 @@ module.exports = {
          month,
          year,
          iso: (`${year}-${month}-${day}`),
-         birthDay: `${month}/${day}`
+         birthDay: `${month}/${day}`,
+         format: `${day}/${month}/${year}`
      }
    }
 }
