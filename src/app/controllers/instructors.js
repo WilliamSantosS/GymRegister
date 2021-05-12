@@ -32,7 +32,7 @@ post(req, res) {
             return res.redirect(`/instructors/${instructor.id}`)
         })
 },
-show(req, res) {
+show(req, res) { 
     Instructor.find(req.params.id, function(instructor) {
         if(!instructor) return res.send("instructor not found")
 
